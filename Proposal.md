@@ -5,10 +5,11 @@
 
 ### Project Description
 * What is the overarching purpose of your research project, and why is it an important undertaking?
-> 
+> Many government and social organizations are working on helping people in poverty but have difficulties in finding the qualified segment of population. Currently, an althrigom called Proxy Means Test (or PMT) is used by agencies to assess a household’s level of need in Latin America. However, the model used still has some accuracy problems caused by population growth and poverty decline. In our research project, we will make a model to identify the poverty level of each household based on the dataset of household information from Costa Rican, which is an under-developing country. Only identifying household with the highest need for social welfare assistance, we can make a reasonable use of our public resources.
 
 * How does your research fit into the broader problem domain? You should cite at least 3 papers that help contextualize your research. 
-> 
+> The problem domain of this research is poverty, And in terms of poverty, there have been extensive researches in the past 100 years. One is an research of examining the poverty/social welfare in Indonesia, and then found that there is a relationship between household structure and poverty.  
+Another research applied machine learning techniques into those two factors for accurate predictions. Last but not the least, an research about China also found some relationship between household and poverty, Given all of those researches, we believe that this topic is consequential to the domain of poverty and therefore requires further investigation to understand the problem thoroughly. 
 
 * What specific hypothesis (hypotheses) are you going to test?
 > 
