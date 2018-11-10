@@ -1,11 +1,11 @@
-# Prediction between Household Enviornmental Structure and Poverty Level
+## Prediction between Household Enviornmental Structure and Poverty Level
 <p align="center">
   Group member: Haoran Pu, Changyu Li, Emily Qiao, Wenjun Chen
 </p>
 
-## Project Description
+### Project Description
 
-## Technical Description
+### Technical Description
 
 * What will be the format of your final web resource?
 > We decide to use HTML pages to build our final report. We believe, as HTML is more flexible compared with other options such as RMarkdown or Shiny, HTML may have more efficiency to visualize data and display graphs.
