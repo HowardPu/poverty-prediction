@@ -46,5 +46,7 @@ Another research applied **machine learning techniques into those two factors fo
 * What major challenges do you anticipate? 
 > As we mentioned before, the first challenge is that we do not learn data wrangling and visualization through HTML in class and we need extra time to learn these skills. Another challenge is that we utilize various programming languages such as R, Python and HTML in this project. It will increase the burden of debugging and testing as they are in different platforms and in different syntaxes.
 
+-----
+
 ### Project Set-up
 > Please check **GitHub repository** about details. 
