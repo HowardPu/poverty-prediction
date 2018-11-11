@@ -15,10 +15,11 @@ Another research applied machine learning techniques into those two factors for 
 > 
 
 * What are the datasets you'll be working with to answer this question? Please include relevant background describing the datasets you identify.
->
+> We will be using the public dataset provided by Inter-American Development Bank (IDB). Given this is an authoritative institution in Costa Rica, we believe this dataset is credible enough to support further investigation.
+> For the data structure, each row of the data set represents an unique household in Costa Rica. Variables include house structure and material, family members age-sex composition, education degree, water provision location, and the location of each household, poverty level (from 1 to 4 where 1 means extremely poor and 4 means not poor at all), and so on. As the dataset generally captures the characteristics of each household and a category of poverty level, we can apply this data to the topic we are investigating.
 
 * What statistical and machine learning methods do you plan on using to test your hypothesis?
->
+> We will use the K-nearest neighbors algorithm (KNN) method from sklearn library for machine learning use the logistic model from the StatsModels library to estimate the statistical model. 
 
 * Who is your target audience for the resource you will build? Depending on the domain of your data, there may be a variety of audiences interested in using the dataset. You should hone in on one of these audiences.
 >
