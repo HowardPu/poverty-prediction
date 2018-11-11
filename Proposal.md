@@ -27,7 +27,7 @@ Another research applied **machine learning techniques into those two factors fo
 * What should your audience learn from your resource? Consider specific questions they may want to answer.
 > Given the problem governors are facing, the prediction algorithm in this report may demonstrate better way to deal with the problems in the previous paragraph. This means, the governor may have better understanding towards who are poor and who should be helped in the society by the population censorship data, which can increase the efficiency of resource redistribution.
 
------
+.....
 
 ### Technical Description
 
