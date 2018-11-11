@@ -22,7 +22,7 @@ Another research applied **machine learning techniques into those two factors fo
 > We will use the **K-nearest neighbors algorithm** (KNN) method from sklearn library for machine learning use the **Logistic Model** from the StatsModels library to estimate the statistical model. 
 
 * Who is your target audience for the resource you will build? Depending on the domain of your data, there may be a variety of audiences interested in using the dataset. You should hone in on one of these audiences.
->
+> We think our audiences may include **Non-Governmental Organizations, governments, private or public investors who show interests in improving the social well-being**. Specifically, for governors, a good prediction between household attributes and poverty may increase the efficiency of social resources redistributions. There is always a problem where government give non-poor household the resources which should be given to the poorest segment of population in the society. This means, the main purpose of this report is to serve as a good prediction for governors. 
 
 * What should your audience learn from your resource? Consider specific questions they may want to answer.
 > 
