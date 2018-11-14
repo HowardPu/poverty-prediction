@@ -12,7 +12,7 @@
 Another research applied **machine learning techniques into those two factors for accurate predictions**. Last but not the least, **an research about China** also found some relationship between household and poverty, Given all of those researches, we believe that this topic is consequential to the domain of poverty and therefore requires further investigation to understand the problem thoroughly. 
 
 * What specific hypothesis (hypotheses) are you going to test?
-> 
+> As the dependent variable is poverty level and independent variables are household attribute. We propose null hypothesis is there is no relationship between household attributes and poverty level. And the althernative hypothesis is there is a relationship between them.
 
 * What are the datasets you'll be working with to answer this question? Please include relevant background describing the datasets you identify.
 > We will be using the public dataset provided by **Inter-American Development Bank** (IDB). Given this is an authoritative institution in Costa Rica, we believe this dataset is credible enough to support further investigation.
