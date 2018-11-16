@@ -128,33 +128,92 @@ Group member: Haoran Pu, Changyu Li, Emily Qiao, Wenjun Chen
 </p>
 <div id="project-description" class="section level3">
 <h3>Project Description</h3>
-<ul>
-<li><p>What is the overarching purpose of your research project, and why is it an important undertaking? &gt; Many government and social organizations are working on helping people in poverty but have difficulties in finding the qualified segment of population. Currently, an althrigom called Proxy Means Test (or PMT) is used by agencies to assess a household’s level of need in Latin America. However, the model used still has some accuracy problems caused by population growth and poverty decline. In our research project, we will <strong>build a model to identify the poverty level of each household based on the dataset of household information from Costa Rican, which is an under-developing country</strong>. Only identifying household with the highest need for social welfare assistance, we can make a reasonable use of our public resources.</p></li>
-<li><p>How does your research fit into the broader problem domain? You should cite at least 3 papers that help contextualize your research. &gt; The problem domain of this research is poverty, And in terms of poverty, there have been extensive researches in the past 100 years. One is an research of <a href="https://elibrary.worldbank.org/doi/pdf/10.1596/1813-9450-2148">examining the poverty/social welfare in Indonesia</a>, and then found that there is a relationship between household structure and poverty.<br />
-Another research applied (machine learning techniques into those two factors for accurate predictions)[<a href="https://arxiv.org/pdf/1711.06813.pdf" class="uri">https://arxiv.org/pdf/1711.06813.pdf</a>]. Last but not the least, (a research about China)[<a href="https://www.sciencedirect.com/science/article/pii/S0147596705000673" class="uri">https://www.sciencedirect.com/science/article/pii/S0147596705000673</a>] also found some relationship between household and poverty, Given all of those researches, we believe that this topic is consequential to the domain of poverty and therefore requires further investigation to understand the problem thoroughly.</p></li>
-<li><p>What specific hypothesis (hypotheses) are you going to test? &gt; As the dependent variable is poverty level and independent variables are household attribute. We propose null hypothesis is there is no relationship between household attributes and poverty level. And the althernative hypothesis is there is a relationship between them.</p></li>
-<li><p>What are the datasets you’ll be working with to answer this question? Please include relevant background describing the datasets you identify. &gt; We will be using the public dataset provided by <strong>Inter-American Development Bank</strong> (IDB). Given this is an authoritative institution in Costa Rica, we believe this dataset is credible enough to support further investigation. &gt; For the data structure, each row of the data set represents an unique household in Costa Rica. Variables include house structure and material, family members age-sex composition, education degree, water provision location, and the location of each household, poverty level (from 1 to 4 where 1 means extremely poor and 4 means not poor at all), and so on. As the dataset generally captures the characteristics of each household and a category of poverty level, we can apply this data to the topic we are investigating.</p></li>
-<li><p>What statistical and machine learning methods do you plan on using to test your hypothesis? &gt; We will use the <strong>K-nearest neighbors algorithm</strong> (KNN) method from sklearn library for machine learning use the <strong>Logistic Model</strong> from the StatsModels library to estimate the statistical model.</p></li>
-<li><p>Who is your target audience for the resource you will build? Depending on the domain of your data, there may be a variety of audiences interested in using the dataset. You should hone in on one of these audiences. &gt; We think our audiences may include <strong>Non-Governmental Organizations, governments, private or public investors who show interests in improving the social well-being</strong>. Specifically, for governors, a good prediction between household attributes and poverty may increase the efficiency of social resources redistributions. There is always a problem where government give non-poor household the resources which should be given to the poorest segment of population in the society. This means, the main purpose of this report is to serve as a good prediction for governors.</p></li>
-<li><p>What should your audience learn from your resource? Consider specific questions they may want to answer. &gt; Given the problem governors are facing, the prediction algorithm in this report may demonstrate better way to deal with the problems in the previous paragraph. This means, the governor may have better understanding towards who are poor and who should be helped in the society by the population censorship data, which can increase the efficiency of resource redistribution.</p></li>
-</ul>
+<div id="what-is-the-overarching-purpose-of-your-research-project-and-why-is-it-an-important-undertaking" class="section level4">
+<h4>What is the overarching purpose of your research project, and why is it an important undertaking?</h4>
+<blockquote>
+<p>Many government and social organizations are working on helping people in poverty but have difficulties in finding the qualified segment of population. Currently, an althrigom called Proxy Means Test (or PMT) is used by agencies to assess a household’s level of need in Latin America. However, the model used still has some accuracy problems caused by population growth and poverty decline. In our research project, we will <strong>build a model to identify the poverty level of each household based on the dataset of household information from Costa Rican, which is an under-developing country</strong>. Only identifying household with the highest need for social welfare assistance, we can make a reasonable use of our public resources.</p>
+</blockquote>
+</div>
+<div id="how-does-your-research-fit-into-the-broader-problem-domain-you-should-cite-at-least-3-papers-that-help-contextualize-your-research." class="section level4">
+<h4>How does your research fit into the broader problem domain? You should cite at least 3 papers that help contextualize your research.</h4>
+<blockquote>
+<p>The problem domain of this research is poverty, And in terms of poverty, there have been extensive researches in the past 100 years. One is an research of <a href="https://elibrary.worldbank.org/doi/pdf/10.1596/1813-9450-2148">examining the poverty/social welfare in Indonesia</a>, and then found that there is a relationship between household structure and poverty.<br />
+Another research applied <a href="https://google.com">machine learning techniques into those two factors for accurate predictions</a>. Last but not the least, <a href="https://www.sciencedirect.com/science/article/pii/S0147596705000673">a research about China</a> also found some relationship between household and poverty, Given all of those researches, we believe that this topic is consequential to the domain of poverty and therefore requires further investigation to understand the problem thoroughly.</p>
+</blockquote>
+</div>
+<div id="what-specific-hypothesis-hypotheses-are-you-going-to-test" class="section level4">
+<h4>What specific hypothesis (hypotheses) are you going to test?</h4>
+<blockquote>
+<p>As the dependent variable is poverty level and independent variables are household attribute. We propose null hypothesis is there is no relationship between household attributes and poverty level. And the althernative hypothesis is there is a relationship between them.</p>
+</blockquote>
+</div>
+<div id="what-are-the-datasets-youll-be-working-with-to-answer-this-question-please-include-relevant-background-describing-the-datasets-you-identify." class="section level4">
+<h4>What are the datasets you’ll be working with to answer this question? Please include relevant background describing the datasets you identify.</h4>
+<blockquote>
+<p>We will be using the public dataset provided by <strong>Inter-American Development Bank</strong> (IDB). Given this is an authoritative institution in Costa Rica, we believe this dataset is credible enough to support further investigation.</p>
+</blockquote>
+<blockquote>
+<p>For the data structure, each row of the data set represents an unique household in Costa Rica. Variables include house structure and material, family members age-sex composition, education degree, water provision location, and the location of each household, poverty level (from 1 to 4 where 1 means extremely poor and 4 means not poor at all), and so on. As the dataset generally captures the characteristics of each household and a category of poverty level, we can apply this data to the topic we are investigating.</p>
+</blockquote>
+</div>
+<div id="what-statistical-and-machine-learning-methods-do-you-plan-on-using-to-test-your-hypothesis" class="section level4">
+<h4>What statistical and machine learning methods do you plan on using to test your hypothesis?</h4>
+<blockquote>
+<p>We will use the <strong>K-nearest neighbors algorithm</strong> (KNN) method from sklearn library for machine learning use the <strong>Logistic Model</strong> from the StatsModels library to estimate the statistical model.</p>
+</blockquote>
+</div>
+<div id="who-is-your-target-audience-for-the-resource-you-will-build-depending-on-the-domain-of-your-data-there-may-be-a-variety-of-audiences-interested-in-using-the-dataset.-you-should-hone-in-on-one-of-these-audiences." class="section level4">
+<h4>Who is your target audience for the resource you will build? Depending on the domain of your data, there may be a variety of audiences interested in using the dataset. You should hone in on one of these audiences.</h4>
+<blockquote>
+<p>We think our audiences may include <strong>Non-Governmental Organizations, governments, private or public investors who show interests in improving the social well-being</strong>. Specifically, for governors, a good prediction between household attributes and poverty may increase the efficiency of social resources redistributions. There is always a problem where government give non-poor household the resources which should be given to the poorest segment of population in the society. This means, the main purpose of this report is to serve as a good prediction for governors.</p>
+</blockquote>
+</div>
+<div id="what-should-your-audience-learn-from-your-resource-consider-specific-questions-they-may-want-to-answer." class="section level4">
+<h4>What should your audience learn from your resource? Consider specific questions they may want to answer.</h4>
+<blockquote>
+<p>Given the problem governors are facing, the prediction algorithm in this report may demonstrate better way to deal with the problems in the previous paragraph. This means, the governor may have better understanding towards who are poor and who should be helped in the society by the population censorship data, which can increase the efficiency of resource redistribution.</p>
+</blockquote>
 <hr />
+</div>
 </div>
 <div id="technical-description" class="section level3">
 <h3>Technical Description</h3>
-<ul>
-<li><p>What will be the format of your final web resource? &gt; We decide to use <strong>HTML pages</strong> to build our final report. We believe, as HTML is more flexible compared with other options such as RMarkdown or Shiny, HTML may have more efficiency to visualize data and display graphs.</p></li>
-<li><p>Do you anticipate any specific data collection / data management challenges? &gt; A few challenges must exist in data management. The first challenge is that we learned to utilize R or Python to manipulate data in class. It means that we have few experience in dealing with data by JavaScript language. Another challenge is that data visualization techniques in JavaScript may not be the same as those in Python/R. In other words, we require extensive research on those exploratory data analysis library to build an interactive report.</p></li>
-<li><p>What new technical skills will need to learn in order to complete your project? &gt; Given those challenges, we believe the following aspects are required for succeeding in this project. The first one is to learn new libraries for data management in JavaScript to clean and prepare the data for further data visualization. And the second aspect is that we should do some research about data visualization tools in Javascript.</p></li>
-<li><p>How will you conduct you analysis? Please include a detailed description of your intended modeling approach. &gt; For exploratory data analysis, the manipulation of data will be done in Javascript/React. For such manipulation, we found “js-dataframe” and “lodash” is useful to wangle the data. For statistical analysis and machine learning process, most of the work will be done in Python. The logistical modeling will be done in “statsmodels” and “sklearns” as we learned both of them in INFO 370.</p></li>
-<li><p>What major challenges do you anticipate? &gt; As we mentioned before, the first challenge is that we do not learn data wrangling and visualization through HTML in class and we need extra time to learn these skills. Another challenge is that we utilize various programming languages such as R, Python and HTML in this project. It will increase the burden of debugging and testing as they are in different platforms and in different syntaxes.</p></li>
-</ul>
+<div id="what-will-be-the-format-of-your-final-web-resource" class="section level4">
+<h4>What will be the format of your final web resource?</h4>
+<blockquote>
+<p>We decide to use <strong>HTML pages</strong> to build our final report. We believe, as HTML is more flexible compared with other options such as RMarkdown or Shiny, HTML may have more efficiency to visualize data and display graphs.</p>
+</blockquote>
+</div>
+<div id="do-you-anticipate-any-specific-data-collection-data-management-challenges" class="section level4">
+<h4>Do you anticipate any specific data collection / data management challenges?</h4>
+<blockquote>
+<p>A few challenges must exist in data management. The first challenge is that we learned to utilize R or Python to manipulate data in class. It means that we have few experience in dealing with data by JavaScript language. Another challenge is that data visualization techniques in JavaScript may not be the same as those in Python/R. In other words, we require extensive research on those exploratory data analysis library to build an interactive report.</p>
+</blockquote>
+</div>
+<div id="what-new-technical-skills-will-need-to-learn-in-order-to-complete-your-project" class="section level4">
+<h4>What new technical skills will need to learn in order to complete your project?</h4>
+<blockquote>
+<p>Given those challenges, we believe the following aspects are required for succeeding in this project. The first one is to learn new libraries for data management in JavaScript to clean and prepare the data for further data visualization. And the second aspect is that we should do some research about data visualization tools in Javascript.</p>
+</blockquote>
+</div>
+<div id="how-will-you-conduct-you-analysis-please-include-a-detailed-description-of-your-intended-modeling-approach." class="section level4">
+<h4>How will you conduct you analysis? Please include a detailed description of your intended modeling approach.</h4>
+<blockquote>
+<p>For exploratory data analysis, the manipulation of data will be done in Javascript/React. For such manipulation, we found “js-dataframe” and “lodash” is useful to wangle the data. For statistical analysis and machine learning process, most of the work will be done in Python. The logistical modeling will be done in “statsmodels” and “sklearns” as we learned both of them in INFO 370.</p>
+</blockquote>
+</div>
+<div id="what-major-challenges-do-you-anticipate" class="section level4">
+<h4>What major challenges do you anticipate?</h4>
+<blockquote>
+<p>As we mentioned before, the first challenge is that we do not learn data wrangling and visualization through HTML in class and we need extra time to learn these skills. Another challenge is that we utilize various programming languages such as R, Python and HTML in this project. It will increase the burden of debugging and testing as they are in different platforms and in different syntaxes.</p>
+</blockquote>
 <hr />
+</div>
 </div>
 <div id="project-set-up" class="section level3">
 <h3>Project Set-up</h3>
 <blockquote>
-<p>Please check <strong>GitHub repository</strong> about details.</p>
+<p>Please check <strong>GitHub repository</strong> about details. We have assigned five issuses for each individual for basic structure of this project.</p>
 </blockquote>
 </div>
 </div>
