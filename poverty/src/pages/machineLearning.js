@@ -85,6 +85,7 @@ export class MachineLearning extends Component {
                         </div>                        
                     </div>
                 </div>
+                <footer>For more detailed analysis, the code can be accessed at (provide a href)</footer>
             </div>
         )
     }

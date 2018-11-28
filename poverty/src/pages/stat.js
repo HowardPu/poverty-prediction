@@ -73,6 +73,7 @@ export class StatAnalysis extends Component {
                         <p>Some further analysis to the p-value</p>
                     </div>
                 </div>
+                <footer>For more detailed analysis, the code can be accessed at (provide a href)</footer>
             </div>
         )
     }

@@ -17,6 +17,7 @@ export class Conclusion extends Component {
 
                     <div>Some further works/extensions of this project</div>
                 </div>
+                <footer>For more detailed analysis, the code can be accessed at (provide a href)</footer>
             </div>
         )
     }

@@ -43,6 +43,7 @@ export class Validation extends Component {
                         <p>Some analysis and suggestions for improvement</p>
                     </div>
                 </div>
+                <footer>For more detailed analysis, the code can be accessed at (provide a href)</footer>
             </div>
         )
     }
