@@ -5,6 +5,8 @@ import {Conclusion} from './pages/conclusion'
 import {Introduction} from './pages/intro'
 import {Data} from './pages/data'
 import {StatAnalysis} from './pages/stat'
+import {MachineLearning} from './pages/machineLearning'
+
 import {Validation} from './pages/validation'
 
 
@@ -24,6 +26,9 @@ class App extends Component {
           }}/>
           <Route path= {"/stat"} render={(routerProps) => {
             return <StatAnalysis {...routerProps} />
+          }}/>
+          <Route path= {"/ml"} render={(routerProps) => {
+            return <MachineLearning {...routerProps} />
           }}/>
           <Route path= {"/validation"} render={(routerProps) => {
             return <Validation {...routerProps} />

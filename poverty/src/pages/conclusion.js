@@ -6,7 +6,17 @@ export class Conclusion extends Component {
         return(
             <div> 
                 <Navigation  current="conclusion"/>
-                <div>This is conclusion</div>
+                <div>
+                    <h1>Conclusions and Implications</h1>
+
+                    <div>Some further analysis from validation</div>
+
+                    <div>Some implications of this researxh</div>
+
+                    <div>Some reflections of the research</div>
+
+                    <div>Some further works/extensions of this project</div>
+                </div>
             </div>
         )
     }

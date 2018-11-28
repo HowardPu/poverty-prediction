@@ -53,14 +53,14 @@ export class Navigation extends Component {
         let introStyle = this.getBackground("/");
         let dataStyle = this.getBackground("data");
         let statStyle = this.getBackground("stat");
+        let mlStyle = this.getBackground("ml")
         let validationStyle = this.getBackground("validation");
         let conclusionStyle = this.getBackground("conclusion");
         return (
-            <Navbar style={{backgroundColor: "#4b2e83", 
+            <Navbar style={{backgroundColor: "gray", 
                             padding: "0px",
                             height: "4rem",
-                            boxShadow: "0 10px 10px rgba(0, 0, 0, 0.16), 0 10px 10px rgba(0, 0, 0, 0.23)",
-                            marginBottom: "2rem" }} light expand="md">
+                            boxShadow: "0 10px 10px rgba(0, 0, 0, 0.16), 0 10px 10px rgba(0, 0, 0, 0.23)",}} light expand="md">
                 <NavbarBrand style={{
                     color: "white"
                 }}>{this.props.name}</NavbarBrand>
@@ -95,6 +95,14 @@ export class Navigation extends Component {
                         }}>
                             <div className={"icon-text-container " + statStyle.disabled}>
                                 <Link to="/stat" style={{ textDecoration: 'none', color: statStyle.color }}>Statistics</Link>
+                            </div>
+                        </NavItem>
+
+                        <NavItem style={{
+                            backgroundColor: mlStyle.backgroundColor
+                        }}>
+                            <div className={"icon-text-container " + mlStyle.disabled}>
+                                <Link to="/ml" style={{ textDecoration: 'none', color: mlStyle.color }}>Machine Learning</Link>
                             </div>
                         </NavItem>
 
