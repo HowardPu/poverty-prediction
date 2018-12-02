@@ -305,10 +305,10 @@ export class Data extends Component {
                     <div>
                         <h2>Data Visulization Analysis</h2>
 
-                        <p>By the data visulization we created, there are some interesting observations between household attributes and poverty.</p>
+                        <p>We find several interesting tendency along poverty level when we play with our interactive visualization charts. </p>
 
                         <p>
-                            The first interesting observation is the relationship between undergraduate education and poverty level. The following table shows
+                            The first interesting observation is about undergraduate education. The following table shows
                             the percentage of people who completed undergraduate degree at each poverty level.
                         </p>
 
@@ -345,14 +345,15 @@ export class Data extends Component {
                             </tbody>
                         </table>
                         <p>
-                            By the date, we can observe that being poverty at any kind of level will result in low change of receiving undergraduate degree, 
-                            due to the fact that the change of percentage, although increases, is not significant between groups with poverty while the difference is huge between
-                            moderate poverty and non-vulnerable households. And this trend also holds for no level of education with a decreasing trend. We believe that there is some
+                            By the date, we can observe that poor family have very low chance of completing undergraduate education. The people in extremely poverty level (level 1)
+                            have the lowest rate of completing undergraduate education and people in nonvulnerable poverty level (level 4) have the highest rate.
+                            The increase of rates from level 1 to 3 is very limited but there's a huge increase of the rates from level 3 to level 4. And this trend holds for 
+                            no level of education with a decreasing trend. We believe that there is some
                             relationships between education and poverty, with the reason that education requires huge financial expenses, which can be negatively impacted by level of poverty.
                         </p>
 
                         <p>
-                            Another interesting observation is about the components of house materials. 
+                            Another interesting observation is about house materials. 
                             The following table shows summarized value from pie chart about the percentage of households' roof material at each poverty level.
                         </p>
                         <table class="table">
@@ -397,9 +398,8 @@ export class Data extends Component {
                         {this.plotBarChart("Poverty Level", "All")}
 
                         <p>
-                            If this datset is a random sample of the population, we can observe that most of household are actually not vulnerable to poverty. 
-                            This means in the future statistical analysis and machine learning. We need to attain high proportion of non-vulnerable households
-                            in order to achieve high accruacy.
+                            If this datset is a random sample of the population, we can conclude that most households are actually not vulnerable to poverty. 
+                            This means in the future statistical analysis and machine learning most of our prediction should be level 4.
                         </p>
                     </div>
                 </div>
