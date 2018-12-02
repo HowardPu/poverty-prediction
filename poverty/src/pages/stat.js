@@ -31,7 +31,7 @@ export class StatAnalysis extends Component {
                     </div>
 
                     <div>
-                        <h2>Feature Selection (Forward Selection or Backward Selection??) and hyperparameter tuning to that regression</h2>
+                        <h2>Feature Selection (Forward Selection) and Hyperparameter Tuning to that Regression</h2>
 
                         <div>
                             <p>In terms of maximizing the predicting level, we need to consider the following things</p>

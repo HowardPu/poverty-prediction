@@ -26,17 +26,18 @@ export class Navigation extends Component {
     getBackground(page) {
         if (page !== this.props.current) {
             return ({
-                color: "white",
+                color: "lightgray",
                 disabled: "",
                 inverse: true,
                 backgroundColor: "none"
             });
         } else {
             return ({
-                color: "black",
                 disabled: " disable-link",
                 inverse: false,
-                backgroundColor: "white"
+                backgroundColor: "none",
+                textDecoration: "underline",
+                color: "lightgray"
             });
         }
     }
@@ -76,7 +77,7 @@ export class Navigation extends Component {
                         }} >
                             <div className={"icon-text-container " + introStyle.disabled}>
                                 <Link to="/" style={{ textDecoration: 'none', color: introStyle.color }} >
-                                    Intro
+                                    Introduction
                                 </Link>
                             </div>
                         </NavItem>
@@ -86,7 +87,7 @@ export class Navigation extends Component {
                             backgroundColor: dataStyle.backgroundColor
                         }}>
                             <div className={"icon-text-container " + dataStyle.disabled}>
-                                <Link to="/data" style={{ textDecoration: 'none', color: dataStyle.color }}>Data</Link>
+                                <Link to="/data" style={{ textDecoration: 'none', color: dataStyle.color }}>Data Wrangling and Visulization</Link>
                             </div>
                         </NavItem>
 
@@ -94,7 +95,7 @@ export class Navigation extends Component {
                             backgroundColor: statStyle.backgroundColor
                         }}>
                             <div className={"icon-text-container " + statStyle.disabled}>
-                                <Link to="/stat" style={{ textDecoration: 'none', color: statStyle.color }}>Statistics</Link>
+                                <Link to="/stat" style={{ textDecoration: 'none', color: statStyle.color }}>Statistical Analysis</Link>
                             </div>
                         </NavItem>
 
@@ -118,7 +119,7 @@ export class Navigation extends Component {
                             backgroundColor: conclusionStyle.backgroundColor
                         }}>
                             <div className={"icon-text-container " + conclusionStyle.disabled}>
-                                <Link to="/conclusion" style={{ textDecoration: 'none', color: conclusionStyle.color }}>Conclusion</Link>
+                                <Link to="/conclusion" style={{ textDecoration: 'none', color: conclusionStyle.color }}>Conclusions and Implications</Link>
                             </div>
                         </NavItem>
                     </Nav>

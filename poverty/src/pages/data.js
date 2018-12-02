@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {Navigation} from './parts/navigation'
+import { Navigation } from './parts/navigation'
 
 import { Chart } from "react-google-charts";
 
@@ -28,7 +28,7 @@ export class Data extends Component {
             "Relationship": "relationship",
             "Educational Level": "education_level",
             "House Type": "type",
-            "Area": "area" 
+            "Area": "area"
         }
 
         this.categoricalOptions = []
@@ -59,7 +59,7 @@ export class Data extends Component {
             "# person per room": "overcrowding",
             "# of Males younger than 12 years of age": "r4h1",
             "# of Males 12 years of age and older": "r4h2",
-            "Total males in the household": "r4h3",
+            "Total males in the household": "r4h4",
             "# of Females younger than 12 years of age": "r4m1",
             "# of Females 12 years of age and older": "r4m2",
             "Total females in the household": "r4m3",
@@ -73,11 +73,11 @@ export class Data extends Component {
         }
 
         this.povertyLevelOptions = [
-            {label: "All", value: "all"},
-            {label: 1, value: 1},
-            {label: 2, value: 2},
-            {label: 3, value: 3},
-            {label: 4, value: 4}
+            { label: "All", value: "all" },
+            { label: 1, value: 1 },
+            { label: 2, value: 2 },
+            { label: 3, value: 3 },
+            { label: 4, value: 4 }
         ]
 
         this.quantitiveOptions = []
@@ -103,10 +103,10 @@ export class Data extends Component {
     plotBarChart(column, povertyLevel) {
         let subtitle = " -- all data"
         let filteredData = []
-        if(povertyLevel !== "All") {
+        if (povertyLevel !== "All") {
             subtitle = " -- poverty level: " + povertyLevel
             this.props.data.forEach((row) => {
-                if(Number(row["Target"]) === povertyLevel) {
+                if (Number(row["Target"]) === povertyLevel) {
                     filteredData.push(row)
                 }
             })
@@ -119,7 +119,7 @@ export class Data extends Component {
         })
 
         this.barchartRange = []
-        
+
         let result = []
         Object.keys(groupByData).forEach(value => {
             result.push(
@@ -129,9 +129,9 @@ export class Data extends Component {
 
         let sorted_data = [[column, "Count"]]
 
-        sorted_data = sorted_data.concat(lodash.sortBy(result, o =>  Number(o[0])))
-        
-        return(
+        sorted_data = sorted_data.concat(lodash.sortBy(result, o => Number(o[0])))
+
+        return (
             <Chart
                 width={'700px'}
                 height={'500px'}
@@ -145,17 +145,17 @@ export class Data extends Component {
                     },
                 }}
                 // For tests
-                rootProps={{'data-testid': '2' }}
+                rootProps={{ 'data-testid': '2' }}
             />)
     }
 
     plotPieChart(column, povertyLevel) {
         let subtitle = " -- all data"
         let filteredData = []
-        if(povertyLevel !== "All") {
+        if (povertyLevel !== "All") {
             subtitle = " -- poverty level: " + povertyLevel
             this.props.data.forEach((row) => {
-                if(Number(row["Target"]) === povertyLevel) {
+                if (Number(row["Target"]) === povertyLevel) {
                     filteredData.push(row)
                 }
             })
@@ -166,17 +166,17 @@ export class Data extends Component {
 
         let groupByData = lodash.groupBy(filteredData, (row) => {
             return row[this.categorical[column]]
-        }) 
+        })
 
         let result = [['Category', 'Counts']]
-        
+
         Object.keys(groupByData).forEach(category => {
             result.push(
                 [category, groupByData[category].length]
             )
         });
 
-        return(
+        return (
             <Chart
                 width={'700px'}
                 height={'500px'}
@@ -188,22 +188,22 @@ export class Data extends Component {
                 }}
                 rootProps={{ 'data-testid': '1' }}
             />
-        );   
+        );
     }
 
     render() {
-        if(!this.props.data) {
-            return(
+        if (!this.props.data) {
+            return (
                 <div>
                     Loading data.
                 </div>)
         }
-        return(
-            <div> 
+        return (
+            <div>
                 <Navigation current="data" />
 
                 <div className="data-page-content" >
-                    <h1>Data Wrangling and Visulization</h1>
+                    <h1>Data Wrangling and Visualization</h1>
 
                     <div>
                         <h2>Data Attributes</h2>
@@ -224,26 +224,26 @@ export class Data extends Component {
                         {/* a flex box to show three aspects */}
                         <div className="data-wrangling-container">
                             <div className="data-wrangling-item">
-                                <h3>Attributes bundling</h3>
+                                <h4>Attributes bundling</h4>
                                 <div>
-                                    This dataset is originally for machine learning to analyze the relationship. In other words, there are lots of dummy variables that can be difficult for data visulizations.
-                                    With those in mind, we first transform those dummy variables back to category variables for easy visulization.    
+                                    This dataset is originally for machine learning to analyze the relationship. In other words, there are lots of dummy variables that can be difficult for data visualization.
+                                    With those in mind, we first transform those dummy variables back to category variables for easy visualization.
                                 </div>
                             </div>
 
                             <div className="data-wrangling-item">
-                                <h3>Columns which are mixed up with both binary data and quantitive data</h3>
+                                <h4>Columns which are mixed up with both binary data and quantitive data</h4>
 
                                 <div>
                                     We observed that there are three columns which the data type is inconsistent: some data are binary while others are quantitive data.
                                     We conjectured that those three data columns are misrecorded, which means we cannot capture the relationship between these attributes and poverty level.
                                     Therefore, we removed those columns as results.
-                                
+
                                 </div>
                             </div>
 
                             <div className="data-wrangling-item">
-                                <h3>Missing Values</h3>
+                                <h4>Missing Values</h4>
 
                                 <div>Two different situations occur in terms of missing values:</div>
 
@@ -256,56 +256,58 @@ export class Data extends Component {
                     </div>
 
                     <div>
-                        <h3>Data Visulizations</h3>
+                        <h2>Data Visualization</h2>
                         <p>
-                            Since most of the columns can be divided into quantitive or categorical groups, we decide to use pie chart to capture the proportions of different categories of categorical variables, 
-                            and use bar char to display the distribution of quantitive variables. 
+                            Since most of the columns can be divided into quantitive or categorical groups, we decide to use pie chart to capture the proportions of different categories of categorical variables,
+                            and use bar char to display the distribution of quantitive variables.
                         </p>
-                        <div>
-                            <div>
+                        <center><div className="vis">
+                            <div className="selection">
                                 <Select options={this.categoricalOptions} value={{
                                     label: this.state.categorical,
                                     value: this.categorical[this.state.categorical]
                                 }} onChange={(input) => {
-                                    this.setState({categorical: input.label})
+                                    this.setState({ categorical: input.label })
                                 }} />
 
                                 <Select options={this.povertyLevelOptions} value={{
                                     label: this.state.categoricalPovertyLevel,
                                     value: this.povertyLevelOptions[this.state.categoricalPovertyLevel]
                                 }} onChange={(input) => {
-                                    this.setState({categoricalPovertyLevel: input.label})
+                                    this.setState({ categoricalPovertyLevel: input.label })
                                 }} />
 
 
                             </div>
-                            {this.plotPieChart(this.state.categorical, this.state.categoricalPovertyLevel)}
-                        </div>
 
-                        <div>
-                            <div>
+                            {this.plotPieChart(this.state.categorical, this.state.categoricalPovertyLevel)}
+                        </div></center>
+
+
+                        <center><div className="vis">
+                            <div className="selection">
                                 <Select options={this.availableQuantitive} value={{
                                     label: this.state.quantitive,
                                     value: this.quantitive[this.state.quantitiveOptions]
                                 }} onChange={(input) => {
-                                    this.setState({quantitive: input.label})
+                                    this.setState({ quantitive: input.label })
                                 }} />
                                 <Select options={this.povertyLevelOptions} value={{
                                     label: this.state.quantitivePovertyLevel,
                                     value: this.povertyLevelOptions[this.state.quantitivePovertyLevel]
                                 }} onChange={(input) => {
-                                    this.setState({quantitivePovertyLevel: input.label})
+                                    this.setState({ quantitivePovertyLevel: input.label })
                                 }} />
                             </div>
                             {this.plotBarChart(this.state.quantitive, this.state.quantitivePovertyLevel)}
-                        </div>
+                        </div></center>
                     </div>
-                    
-                    
-                    <div>
-                        <h2>Data Visulization Analysis</h2>
 
-                        <p>By the data visulization we created, there are some interesting observations between household attributes and poverty.</p>
+
+                    <div>
+                        <h2>Data Visualization Analysis</h2>
+
+                        <p>By the data visualization we created, there are some interesting observations between household attributes and poverty.</p>
 
                         <p>
                             The first interesting observation is the relationship between undergraduate education and poverty level. The following table shows
@@ -315,21 +317,21 @@ export class Data extends Component {
                         <table class="table">
                             <thead>
                                 <tr>
-                                <th scope="col">Poverty</th>
-                                <th scope="col">Undergraduate and higher education</th>
-                                <th scope="col">No level of education</th>
-                                
+                                    <th scope="col">Poverty</th>
+                                    <th scope="col">Undergraduate and higher education</th>
+                                    <th scope="col">No level of education</th>
+
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th scope="row">Extremely Poverty</th>
-                                    <td>2.5%</td> 
+                                    <td>2.5%</td>
                                     <td>24.5</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Vulnerable</th>
-                                    <td>3.1%</td> 
+                                    <td>3.1%</td>
                                     <td>19.7%</td>
                                 </tr>
                                 <tr>
@@ -345,39 +347,39 @@ export class Data extends Component {
                             </tbody>
                         </table>
                         <p>
-                            By the date, we can observe that being poverty at any kind of level will result in low change of receiving undergraduate degree, 
+                            By the date, we can observe that being poverty at any kind of level will result in low change of receiving undergraduate degree,
                             due to the fact that the change of percentage, although increases, is not significant between groups with poverty while the difference is huge between
                             moderate poverty and non-vulnerable households. And this trend also holds for no level of education with a decreasing trend. We believe that there is some
                             relationships between education and poverty, with the reason that education requires huge financial expenses, which can be negatively impacted by level of poverty.
                         </p>
 
                         <p>
-                            Another interesting observation is about the components of house materials. 
+                            Another interesting observation is about the components of house materials.
                             The following table shows summarized value from pie chart about the percentage of households' roof material at each poverty level.
                         </p>
                         <table class="table">
                             <thead>
                                 <tr>
-                                <th scope="col">Poverty</th>
-                                <th scope="col">Major roof material is mosaic, ceramic,terrazo</th>
-                                
+                                    <th scope="col">Poverty</th>
+                                    <th scope="col">Major roof material is mosaic, ceramic,terrazo</th>
+
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th scope="row">Extremely Poverty</th>
-                                    <td>46.6%</td> 
-                                    
+                                    <td>46.6%</td>
+
                                 </tr>
                                 <tr>
                                     <th scope="row">Vulnerable</th>
-                                    <td>49.4%</td> 
-                                    
+                                    <td>49.4%</td>
+
                                 </tr>
                                 <tr>
                                     <th scope="row">Moderate Poverty</th>
                                     <td>61%</td>
-                                    
+
                                 </tr>
                                 <tr>
                                     <th scope="row">Non-Vulnerable</th>
@@ -385,7 +387,7 @@ export class Data extends Component {
                                 </tr>
                             </tbody>
                         </table>
-                        
+
                         <p>
                             This table shows, as households are less poor, there will be higher prportion who will use mosaic, ceramic,terrazo for roof material.
                             Based on daily experience, we know that those materials are more expensive compared with wood, cement, etc. And this knowledge leads us to
@@ -394,10 +396,10 @@ export class Data extends Component {
                         </p>
 
                         <p>Last but not the least, there are also some interesting observations about the distribution of poverty level:</p>
-                        {this.plotBarChart("Poverty Level", "All")}
+                        <center><div className="vis barchart">{this.plotBarChart("Poverty Level", "All")}</div></center>
 
                         <p>
-                            If this datset is a random sample of the population, we can observe that most of household are actually not vulnerable to poverty. 
+                            If this datset is a random sample of the population, we can observe that most of household are actually not vulnerable to poverty.
                             This means in the future statistical analysis and machine learning. We need to attain high proportion of non-vulnerable households
                             in order to achieve high accruacy.
                         </p>

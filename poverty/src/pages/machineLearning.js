@@ -6,7 +6,7 @@ export class MachineLearning extends Component {
         return(
             <div> 
                 <Navigation current="ml" />
-                <div>
+                <div className="ml-page-content">
                     <h1>Machine Learning</h1>
                     
                     <div>
@@ -26,17 +26,17 @@ export class MachineLearning extends Component {
                             {/* flex box to show three aspects?*/}
                             <div className="feature-selection-container" >
                                 <div className="feature-selection-item" >
-                                    <h3>Feature Addtion</h3>
+                                    <h4>Feature Addtion</h4>
                                     <p>Add a new feature and explain why</p>
                                 </div>
 
                                 <div className="feature-selection-item" >
-                                    <h3>Feature selection(By percentile?)</h3>
+                                    <h4>Feature selection(By percentile?)</h4>
                                     <p>Choose an approach and explain the reason</p>
                                 </div>
 
                                 <div className="feature-selection-item" >
-                                    <h3>Feature Transformation</h3>
+                                    <h4>Feature Transformation</h4>
                                     <p>Apply the polynomial transformation and explain why</p>
                                 </div>
                             </div>
@@ -50,17 +50,17 @@ export class MachineLearning extends Component {
                         {/* Flex box? */}
                         <div className="Model-Training-container" >
                             <div className="model-training-item" >
-                                <h3>Data Separation</h3>
+                                <h4>Data Separation</h4>
                                 <p>Ratio of dataset for training/testing and explain why</p>
                             </div>
 
                             <div className="model-training-item" >
-                                <h3>Cross Validation</h3>
+                                <h4>Cross Validation</h4>
                                 <p>How many parts to fold in training data and explain why using CV</p>
                             </div>
 
                             <div className="model-training-item" >
-                                <h3>Standard for Validation</h3>
+                                <h4>Standard for Validation</h4>
                                 <p>Mean score value? and explain why</p>
                             </div>
                         </div>

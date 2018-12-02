@@ -13,7 +13,7 @@ export class Introduction extends Component {
                                 <strong>Statistical Analysis to Poverty Level Based on Household Attributes</strong>
                             </h1>
                             <p>Give help to those who need help the most.</p>
-                            <p>Howard Pu, Changyu Li, Wenjun Chen, Xiaoli Qiao </p>
+                            <p> by Howard Pu, Changyu Li, Wenjun Chen, Xiaoli Qiao </p>
                         </div>
                 </div>
 
@@ -60,7 +60,7 @@ export class Introduction extends Component {
                 <div className="structure-container" >
                     <h2>Data Source</h2>
                     <p> 
-                        This dataset is from <a href="https://www.iadb.org/en" target="_blank" rel="noopener noreferrer">Inter-American Development Bank</a>, the largest source of development financing for Latin Amercia and the Caribbean.
+                        This dataset is from <a className="reference" href="https://www.iadb.org/en" target="_blank" rel="noopener noreferrer">Inter-American Development Bank</a>, the largest source of development financing for Latin Amercia and the Caribbean.
                         This dataset provides comprehensive information we can probably use, such as house structure, to make a good model about poverety prediction and this is the reason of why we chose this dataset. 
                     </p>
                     <h2>In our website, you can find</h2>
@@ -72,7 +72,7 @@ export class Introduction extends Component {
                         <li>Conclusion and implication of our research</li>
                     </ul>
                 </div>
-                <footer>The image is from <a href="https://news.un.org/en/story/2018/09/1019952" rel="noopener noreferrer" target="_blank" >UN News</a></footer>
+                <footer>Image from <a className = "footer-reference" href="https://news.un.org/en/story/2018/09/1019952" rel="noopener noreferrer" target="_blank" >UN News</a></footer>
             </div>
         )
     }

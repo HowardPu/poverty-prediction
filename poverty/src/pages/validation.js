@@ -9,7 +9,7 @@ export class Validation extends Component {
         return(
             <div> 
                 <Navigation current="validation" />
-                <div>
+                <div className="validation-page-content">
                     <h1>Validation</h1>
                     <p>After all statistical analysis and model training, we can then access the vadility of each approach.</p>
                     <div>
