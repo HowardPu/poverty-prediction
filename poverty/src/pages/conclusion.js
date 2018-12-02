@@ -6,7 +6,7 @@ export class Conclusion extends Component {
         return(
             <div> 
                 <Navigation  current="conclusion"/>
-                <div>
+                <div className="conclustion-page-content content">
                     <h1>Conclusions and Implications</h1>
                     
                     <div>

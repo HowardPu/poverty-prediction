@@ -4,9 +4,9 @@ import {Navigation} from './parts/navigation'
 export class MachineLearning extends Component {
     render() {
         return(
-            <div> 
+            <div > 
                 <Navigation current="ml" />
-                <div>
+                <div className="ml-page-content">
                     <h1>Machine Learning</h1>
                     
                     <div>

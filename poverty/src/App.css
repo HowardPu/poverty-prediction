@@ -16,6 +16,12 @@
   flex-basis: 40%;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
+  padding-left : 5%;
+}
+
+.nav-item {
+  margin-right: 2%;
+  font-size: 15pt;
 }
 
 .roundness-shadow {
@@ -26,21 +32,34 @@
 .target-user-container {
   background-color: #8e7e81;
   color: white;
-  padding: 2rem;
+  padding: 5%;
+  justify-content: space-evenly;
 }
 
 .purpose-container {
   background-color: #f0dfcf;
-  
-  padding: 2rem;
+  padding: 5%;
 }
 
 .structure-container {
   background-color: #bcaaa4;
   color: white;
-  padding: 2rem;
+  padding: 5%;
   padding-top: 2rem;
+  padding-bottom: 2rem;
 }
+
+.reference {
+  text-decoration: none;
+  color: white;
+}
+
+.reference:hover {
+  text-decoration: underline;
+  color: white;
+  font-style: italic;
+}
+
 
 .purpose-content-container {
   display: flex;
@@ -53,6 +72,69 @@
   padding: 2rem;
 }
 
+footer {
+  background-color: #bcaaa4;
+  text-align: right;
+  padding-right: 5%;
+  padding-bottom: 1%;
+  font-size: 0.7rem;
+  color: rgb(57, 56, 56);
+}
+
+.footer-reference {
+  color: rgb(57, 56, 56);
+  text-decoration: none;
+}
+
+.footer-reference:hover {
+  text-decoration: underline;
+  color: white;
+  font-style: italic;
+}
+
+.data-page-content, .stat-page-content, .ml-page-content, .validation-page-content, .conclustion-page-content {
+  padding: 5%;
+  background-color: rgb(229, 229, 233);
+}
+
+
+.selection{
+  width: 700px;
+  padding-top: 20px;
+}
+
+.vis {
+  margin-bottom: 2%;
+  padding-right: 20px;
+  background-color: white;
+  width: 800px;
+  box-shadow: black 2px;
+}
+
+.barchart {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+
+.data-page-content h4 {
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.data-page-content li a {
+  color: black;
+  font-style: italic;
+}
+
+
+.data-page-content h2 {
+  margin-top: 2%;
+}
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -61,3 +143,189 @@
     transform: rotate(360deg);
   }
 }
+.title {
+	font-family: "Encode Sans Compressed", sans-serif;
+  
+	background-image: url('imgs/poverty_child.jpg');
+	background-size: cover;
+	width: 100%;
+	box-sizing: border-box;
+  
+	min-height: calc(100vh - 60px);
+  
+	display: flex;
+  }
+  
+  .nav-item a:active, .nav-item a:visited{
+  ????text-decoration: underline !important;
+  }
+  
+  
+  .title-content {
+	padding-top: 7rem;
+	flex-basis: 40%;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding-left : 5%;
+  }
+  
+  .nav-item {
+	margin-right: 2%;
+	font-size: 15pt;
+  }
+  
+  nav {
+  ????padding-left: 5%;
+  }
+  
+  .roundness-shadow {
+	border-radius: 2px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.16), 0 10px 10px rgba(0, 0, 0, 0.23);
+  }
+  
+  .target-user-container {
+	background-color: #8e7e81;
+	color: white;
+	padding: 5%;
+	justify-content: space-evenly;
+  }
+  
+  .purpose-container {
+	background-color: #f0dfcf;
+	padding: 5%;
+  }
+  
+  .structure-container {
+	background-color: #bcaaa4;
+	color: white;
+	padding: 5%;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+  }
+  
+  .reference {
+	text-decoration: none;
+	color: white;
+  }
+  
+  .reference:hover {
+	text-decoration: underline;
+	color: white;
+	font-style: italic;
+  }
+  
+  
+  .purpose-content-container {
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  .purpose-content-item {
+	flex-basis: 30%;
+	background-color: aliceblue;
+	padding: 2rem;
+  }
+  
+  footer {
+	background-color:rgb(229, 229, 233);
+	text-align: right;
+	padding-right: 5%;
+	padding-bottom: 0.5%;
+	font-size: 0.7rem;
+	color: rgb(57, 56, 56);
+  }
+  
+  .footer-reference {
+	color: rgb(57, 56, 56);
+	text-decoration: none;
+  }
+  
+  .footer-reference:hover {
+	text-decoration: underline;
+	color: white;
+	font-style: italic;
+  }
+  
+  .data-page-content, .stat-page-content, .ml-page-content, .validation-page-content, .conclustion-page-content {
+	padding: 5%;
+	background-color: rgb(229, 229, 233);
+  }
+  
+  
+  .icon-text-container a:active{
+  ????text-decoration: underline;
+  }
+  
+  .selection{
+	width: 700px;
+	padding-top: 20px;
+  }
+  
+  .vis {
+	margin-bottom: 2%;
+	padding-right: 20px;
+	background-color: white;
+	width: 800px;
+	box-shadow: black 2px;
+  }
+  
+  .barchart {
+	padding-top: 20px;
+	padding-bottom: 20px;
+  }
+  
+  table {
+	  border-collapse: collapse;
+	  width: 65% !important;
+	  margin-left: 15%;
+  }
+  
+  th, td, tr {
+	  border-bottom: 1px solid gray;
+	  border-top: 1px solid gray;
+  }
+  
+  .data-page-content h4 {
+	margin-bottom: 1%;
+	margin-top: 1%;
+  }
+  
+  .table thead th {
+	  border-bottom: 2px solid darkgray !important;
+  }
+  
+  
+  .data-page-content li a {
+	color: black;
+	font-style: italic;
+  }
+  
+  
+  .data-page-content h2 {
+	margin-top: 2%;
+  }
+  
+  .validation-page-content img{
+	  padding-bottom: 1rem;
+  }
+  
+  .content {
+	  min-height: calc(100vh - 80px);
+  }
+
+  .selector {
+	  width: 800px;
+  }
+
+  
+  
+  @keyframes App-logo-spin {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  

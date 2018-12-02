@@ -179,6 +179,7 @@ export class Data extends Component {
             <Chart
                 width={'700px'}
                 height={'500px'}
+                padding={"50px"}
                 chartType="PieChart"
                 loader={<div>Loading Chart</div>}
                 data={result}
@@ -255,12 +256,12 @@ export class Data extends Component {
                     </div>
 
                     <div>
-                        <h3>Data Visulizations</h3>
+                        <h3>Data Visualizations</h3>
                         <p>
                             Since most of the columns can be divided into quantitive or categorical groups, we decide to use pie chart to capture the proportions of different categories of categorical variables, 
                             and use bar char to display the distribution of quantitive variables. 
                         </p>
-                        <div>
+                        <center><div className="selector">
                             <div>
                                 <Select options={this.categoricalOptions} value={{
                                     label: this.state.categorical,
@@ -277,12 +278,13 @@ export class Data extends Component {
                                 }} />
 
 
-                            </div>
-                            {this.plotPieChart(this.state.categorical, this.state.categoricalPovertyLevel)}
-                        </div>
-
-                        <div>
-                            <div>
+                            </div >
+                            <div className="vis">{this.plotPieChart(this.state.categorical, this.state.categoricalPovertyLevel)}</div>
+                            
+                        </div></center>
+                        
+                        <center><div>
+                            <div className="selector">
                                 <Select options={this.availableQuantitive} value={{
                                     label: this.state.quantitive,
                                     value: this.quantitive[this.state.quantitiveOptions]
@@ -296,8 +298,10 @@ export class Data extends Component {
                                     this.setState({quantitivePovertyLevel: input.label})
                                 }} />
                             </div>
-                            {this.plotBarChart(this.state.quantitive, this.state.quantitivePovertyLevel)}
-                        </div>
+                            <div className="vis">{this.plotBarChart(this.state.quantitive, this.state.quantitivePovertyLevel)}</div>
+                            
+                        </div></center>
+                        
                     </div>
                     
                     
@@ -350,7 +354,6 @@ export class Data extends Component {
                             no level of education with a decreasing trend. We believe that there is some
                             relationships between education and poverty, with the reason that education requires huge financial expenses, which can be negatively impacted by level of poverty.
                         </p>
-
                         <p>
                             Another interesting observation is about house materials. 
                             The following table shows summarized value from pie chart about the percentage of households' roof material at each poverty level.
@@ -394,7 +397,9 @@ export class Data extends Component {
                         </p>
 
                         <p>Last but not the least, there are also some interesting observations about the distribution of poverty level:</p>
-                        {this.plotBarChart("Poverty Level", "All")}
+                        <center><div className="vis">{this.plotBarChart("Poverty Level", "All")}</div></center>
+                        
+                        
 
                         <p>
                             If this datset is a random sample of the population, we can conclude that most households are actually not vulnerable to poverty. 

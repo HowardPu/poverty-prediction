@@ -9,7 +9,7 @@ export class Validation extends Component {
         return(
             <div> 
                 <Navigation current="validation" />
-                <div>
+                <div className="validation-page-content">
                     <h1>Validation</h1>
                     <p>After all statistical analysis and model training, we can then access the vadility of each approach.</p>
                     <p>
@@ -19,7 +19,8 @@ export class Validation extends Component {
                     <div>
                         <h2>Visulization to the performance of statistical analysis</h2>
                         <p>The first aspect is we can analyze our statistical model by distributions of prediction and actual poverty level</p>
-                        <img src="./imgs/stat_pred.png" ></img>
+                        <center><img src="./imgs/stat_pred.png" ></img></center>
+                        
 
                         <p>With the barplot, we can clearly observe that the statistic model has undeprediction at level 1 and 2, 
                             while has overprediction at level 3 and 4, with level 3 has significant overprdiction. Given logistic regression
@@ -27,14 +28,16 @@ export class Validation extends Component {
                             hold a s-like shape, therefore owning lower prediction at lower end and overprediction at higher end.</p>
                         
                         <p>The second thing we can see is the proportion of overprediction/underprediction/exact prediction</p>
-                        <img src="./imgs/Rplot.png" ></img>
+                        <center><img src="./imgs/Rplot.png" ></img></center>
+                        
                         <p>
                             With the proportion, overprediction is as twice as underprediction. Moreover, almost 1/3 of the household are misclassified, which 
                             may imply that ordinal logistic regression may not be able to capture the relationship between poverty and household attributes.
                         </p>
 
                         <p>Specifically, we can see the residuals of each cases where the prediction is wrong.</p>
-                        <img src="./imgs/stat_bar.png" ></img>
+                        <center><img src="./imgs/stat_bar.png" ></img></center>
+                        
                         <p>
                             The shape of residual distributions is almost symmetry, with right hand side has longer and higher tiles. 
                             Furthermore, we also observe that the number of cases decreases as the absolute number of residual increase.
@@ -76,7 +79,8 @@ export class Validation extends Component {
                     <div>
                         <h2>Visulization to the performance of random forest</h2>
                         <p>With similar approach, we will first access the distribution of predict poverty values against actual</p>
-                        <img src="./imgs/rf_bar_chart.png"></img>
+                        <center><img src="./imgs/rf_bar_chart.png"></img></center>
+                        
                         <p>
                             In this case, although it seems to be random forest still overpredicts the poverty level, the gap between prediction and actual
                             poverty has been reduced a lot. With those in mind, we can infer that random forest has a much higher potential to predict and
@@ -84,7 +88,8 @@ export class Validation extends Component {
                         </p>
 
                         <p>And following chart shows the proportion of over/under/exact prediction</p>
-                        <img src="./imgs/rf_pie_chart.png" ></img>
+                        <center><img src="./imgs/rf_pie_chart.png" ></img></center>
+                        
                         <p>
                             The pie chart shows the exactly the same trend with one in statistic analysis: random forest overpredicts the poverty level, and 
                             the overprediction is as twice as underprediction. However, since the amount of misclassficiation is low in this case, there is 
