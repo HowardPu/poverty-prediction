@@ -12,7 +12,12 @@ export class MachineLearning extends Component {
                     <div>
                         <h2>Model Selection</h2>
 
-                        <div>Select a model and explain the reason why using this model</div>
+                        <p>We selected random forests as our machine learning model for two main reasons. 
+                            First, random forests is a good method for doing classification and the prediction
+                            of our project should be the classification of each household's poverty level from 1 to 4.
+                            Second, random forest works better in avoiding overfitting to training dataset
+                            compared to decision trees.
+                        </p>
                     </div>
 
                     <div>
@@ -27,17 +32,22 @@ export class MachineLearning extends Component {
                             <div className="feature-selection-container" >
                                 <div className="feature-selection-item" >
                                     <h3>Feature Addtion</h3>
-                                    <p>Add a new feature and explain why</p>
+                                    <p>We think the dataset already provides a comprehensive list of features so we 
+                                        do not add new feature.
+                                    </p>
                                 </div>
 
                                 <div className="feature-selection-item" >
-                                    <h3>Feature selection(By percentile?)</h3>
-                                    <p>Choose an approach and explain the reason</p>
+                                    <h3>Feature selection(By percentile)</h3>
+                                    <p>We select features according to 25, 50, 75, 100 percentile of the highest scores</p>
                                 </div>
 
                                 <div className="feature-selection-item" >
                                     <h3>Feature Transformation</h3>
-                                    <p>Apply the polynomial transformation and explain why</p>
+                                    <p>We apply the polynomial transformation to generate a new feature matrix
+                                        consisting of all polynomial combinations of features with degree less 
+                                        than or equal to 3.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -51,17 +61,23 @@ export class MachineLearning extends Component {
                         <div className="Model-Training-container" >
                             <div className="model-training-item" >
                                 <h3>Data Separation</h3>
-                                <p>Ratio of dataset for training/testing and explain why</p>
+                                <p>We split 70% of the dataset into training data and the rest 30% into test data. </p>
                             </div>
 
                             <div className="model-training-item" >
                                 <h3>Cross Validation</h3>
-                                <p>How many parts to fold in training data and explain why using CV</p>
+                                <p>We split the data into 10 folds and each fold of the data is used as the
+                                    validation one time. In this way, we can decrease the chance that we get
+                                    a certain subset of training set by chance and therefore harness the full
+                                    potential of our model. The highest accuracy rate is 91%.
+                                </p>
                             </div>
 
                             <div className="model-training-item" >
                                 <h3>Standard for Validation</h3>
-                                <p>Mean score value? and explain why</p>
+                                <p>Accuracy. Our results should be the classification of povety level so
+                                    we choose accuracy as Standard for validation.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -81,7 +97,7 @@ export class MachineLearning extends Component {
                                     <li>Something</li>
                                 </ul>
                             </ul>
-                            <p>Lowest absolute mean error: something</p>
+                            <p>Accuracy: something</p>
                         </div>                        
                     </div>
                 </div>

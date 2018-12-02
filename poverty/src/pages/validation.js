@@ -33,7 +33,7 @@ export class Validation extends Component {
 
                     <div>
                         <h2>Machine Learning</h2>
-                        <p>With the best model, we can access its vadility by predicting the testing data in data separation section</p>
+                        <p>With the best model, we access its vadility by predicting the testing data and get an accuracy rate of 92%.</p>
                         <div>
                             {/*Some visulizations to the prediction against actual value*/}
                             <div>Some visulizations to the prediction against actual value</div>
