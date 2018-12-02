@@ -13,21 +13,27 @@ export class Validation extends Component {
                     <h1>Validation</h1>
                     <p>After all statistical analysis and model training, we can then access the vadility of each approach.</p>
                     <div>
+                        <h2>Visulization to the performance of statistical analysis</h2>
+                        
                         <h2>Statistical Analysis: Chi-2 Test of best fit model</h2>
                         <div>
-                            {/*Some visulizations to the prediction against actual value*/}
-                            <div>Some visulizations to the prediction against actual value</div>
-                            <p>Some analysis</p>
-                        </div>
-                        <div>
-                            Given the model is xxx regression, we can apply the Chi-2 test of best fit model where:
-                            <ur>
-                                <li>N0: xxx regression is a best fit model of estimating poverty based on household attribute</li>
-                                <li>N1: xxx regression is not a best fit model of estimating poverty based on household attribute</li>
-                            </ur>
-                            <p>With degrees of freedom xxx and chi-2 score xxx, we can get p value xxx, which implies xxx</p>
+                            <p>
+                                There is no straightfowward way of accessing the strength of this regression, as the dependent variable is ordinal variable.
+                                However, we can apply the best fit model test to determine whether this model can capture the relationship betweem household
+                                structure and poverty level.
+                            </p>
 
-                            <p>Some further analysis to the p value</p>
+                            <p>For the test of best fit model, we propose the following pair of null/alternative hypothesis:</p>
+
+                            <ul>
+                                <li>H0: this model is a best fit between household attributes and poverty level</li>
+                                <li>H1: this model is not a best fit between household attributs and poverty level</li>
+                            </ul>
+
+                            <p>
+                                With the deviance 16088 and degrees of freedom 9493, this models yield of p value 0, which means we reject the null hypothesis,
+                                and therefore this model is not a best fit of household structure and poverty level.
+                            </p>
                         </div>
                     </div>
 
