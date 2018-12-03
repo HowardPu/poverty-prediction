@@ -16,12 +16,12 @@ export class Data extends Component {
             "Wall Material": "outside_wall_material",
             "Roof Material": "roof_material",
             "Water Provision": "water_provision",
-            "Electricy Source": "electricity_source",
-            "Toliet Type": "toilet",
+            "Electricity Source": "electricity_source",
+            "Toilet Type": "toilet",
             "Cooking Energy Source": "cooking_energy_source",
             "Rubbish Disposal Type": "rubbish_disposal",
-            "Wall Quaility": "wall_quality",
-            "Roof Quaility": "roof_quality",
+            "Wall Quality": "wall_quality",
+            "Roof Quality": "roof_quality",
             "Gender": "gender",
             "Civil Status": "civil_status",
             "Relationship": "relationship",
@@ -203,10 +203,10 @@ export class Data extends Component {
                 <Navigation current="data" />
 
                 <div className="data-page-content" >
-                    <h1>Data Wrangling and Visulization</h1>
+                    <h1>1. Data Wrangling and Visualization</h1>
 
                     <div>
-                        <h2>Data Attributes</h2>
+                        <h2>1.1 Data Attributes</h2>
                         <p>This dataset has 63 different attributes. As displaying all attributes are hard to follow, we categorize them as follow:</p>
                         <ul>
                             <li>Poverty Level from 1 to 4, where 1 is extreme poverty and 4 is nonvulnerable, defined by <a href="https://www.iadb.org/en/research-and-data/poverty%2C7526.html" target="_blank" rel="noopener noreferrer">this creteria</a>.</li>
@@ -219,20 +219,20 @@ export class Data extends Component {
                     </div>
 
                     <div>
-                        <h2>Data Wrangling</h2>
+                        <h2>1.2 Data Wrangling</h2>
                         <p>Based on our observations, we found that this dataset needs to be extensively processed. And our general approaches are the following:</p>
                         {/* a flex box to show three aspects */}
                         <div className="data-wrangling-container">
                             <div className="data-wrangling-item">
-                                <h3>Attributes bundling</h3>
+                                <h3>1.2.1 Attributes Bundling</h3>
                                 <div>
-                                    This dataset is originally for machine learning to analyze the relationship. In other words, there are lots of dummy variables that can be difficult for data visulizations.
-                                    With those in mind, we first transform those dummy variables back to category variables for easy visulization.    
+                                    This dataset is originally for machine learning to analyze the relationship. In other words, there are lots of dummy variables that can be difficult for data visualizations.
+                                    With those in mind, we first transform those dummy variables back to category variables for easy visualization.    
                                 </div>
                             </div>
 
                             <div className="data-wrangling-item">
-                                <h3>Columns which are mixed up with both binary data and quantitive data</h3>
+                                <h3>1.2.2 Remove Columns</h3>
 
                                 <div>
                                     We observed that there are three columns which the data type is inconsistent: some data are binary while others are quantitive data.
@@ -243,12 +243,12 @@ export class Data extends Component {
                             </div>
 
                             <div className="data-wrangling-item">
-                                <h3>Missing Values</h3>
+                                <h3>1.2.3 Missing Values</h3>
 
                                 <div>Two different situations occur in terms of missing values:</div>
 
                                 <ul>
-                                    <li>Some columns miss values for more than 50%, which lead us to remove these columns for accruate analysis</li>
+                                    <li>Some columns miss values for more than 50%, which lead us to remove these columns for accurate analysis</li>
                                     <li>In some cases, such as tablet, the NA value just represents the number of tablet is 0 and therefore we change those NA values to 0.</li>
                                 </ul>
                             </div>
@@ -256,21 +256,21 @@ export class Data extends Component {
                     </div>
 
                     <div>
-                        <h3>Data Visualizations</h3>
+                        <h2>1.3 Data Visualizations</h2>
                         <p>
                             Since most of the columns can be divided into quantitive or categorical groups, we decide to use pie chart to capture the proportions of different categories of categorical variables, 
                             and use bar char to display the distribution of quantitive variables. 
                         </p>
-                        <center><div className="selector">
-                            <div>
-                                <Select options={this.categoricalOptions} value={{
+                        <center><div>
+                            <div className="selector">
+                                <Select className="selector-item" options={this.categoricalOptions} value={{
                                     label: this.state.categorical,
                                     value: this.categorical[this.state.categorical]
                                 }} onChange={(input) => {
                                     this.setState({categorical: input.label})
                                 }} />
 
-                                <Select options={this.povertyLevelOptions} value={{
+                                <Select className="selector-item" options={this.povertyLevelOptions} value={{
                                     label: this.state.categoricalPovertyLevel,
                                     value: this.povertyLevelOptions[this.state.categoricalPovertyLevel]
                                 }} onChange={(input) => {
@@ -285,13 +285,13 @@ export class Data extends Component {
                         
                         <center><div>
                             <div className="selector">
-                                <Select options={this.availableQuantitive} value={{
+                                <Select className="selector-item" options={this.availableQuantitive} value={{
                                     label: this.state.quantitive,
                                     value: this.quantitive[this.state.quantitiveOptions]
                                 }} onChange={(input) => {
                                     this.setState({quantitive: input.label})
                                 }} />
-                                <Select options={this.povertyLevelOptions} value={{
+                                <Select className="selector-item" options={this.povertyLevelOptions} value={{
                                     label: this.state.quantitivePovertyLevel,
                                     value: this.povertyLevelOptions[this.state.quantitivePovertyLevel]
                                 }} onChange={(input) => {
@@ -306,7 +306,7 @@ export class Data extends Component {
                     
                     
                     <div>
-                        <h2>Data Visulization Analysis</h2>
+                        <h2>1.4 Data Visualization Analysis</h2>
 
                         <p>We find several interesting tendency along poverty level when we play with our interactive visualization charts. </p>
 
@@ -315,7 +315,7 @@ export class Data extends Component {
                             the percentage of people who completed undergraduate degree at each poverty level.
                         </p>
 
-                        <table className="table">
+            <center><table className="table">
                             <thead>
                                 <tr>
                                 <th scope="col">Poverty</th>
@@ -346,7 +346,8 @@ export class Data extends Component {
                                     <td>9.8%</td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table></center>
+                        
                         <p>
                             By the date, we can observe that poor family have very low chance of completing undergraduate education. The people in extremely poverty level (level 1)
                             have the lowest rate of completing undergraduate education and people in nonvulnerable poverty level (level 4) have the highest rate.
@@ -358,11 +359,11 @@ export class Data extends Component {
                             Another interesting observation is about house materials. 
                             The following table shows summarized value from pie chart about the percentage of households' roof material at each poverty level.
                         </p>
-                        <table className="table">
+                        <center><table className="table">
                             <thead>
                                 <tr>
                                 <th scope="col">Poverty</th>
-                                <th scope="col">Major roof material is mosaic, ceramic,terrazo</th>
+                                <th scope="col">Major roof material is mosaic, ceramic, terrazo</th>
                                 
                                 </tr>
                             </thead>
@@ -387,10 +388,11 @@ export class Data extends Component {
                                     <td>79.1%</td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table></center>
+                        
                         
                         <p>
-                            This table shows, as households are less poor, there will be higher prportion who will use mosaic, ceramic,terrazo for roof material.
+                            This table shows, as households are less poor, there will be higher proportion who will use mosaic, ceramic, terrazo for roof material.
                             Based on daily experience, we know that those materials are more expensive compared with wood, cement, etc. And this knowledge leads us to
                             conjecture that there is a relationship between roof material and poverty level, as people are less poor, they will apply better and more
                             expensive materials for their houses.
@@ -402,7 +404,7 @@ export class Data extends Component {
                         
 
                         <p>
-                            If this datset is a random sample of the population, we can conclude that most households are actually not vulnerable to poverty. 
+                            If this dataset is a random sample of the population, we can conclude that most households are actually not vulnerable to poverty. 
                             This means in the future statistical analysis and machine learning most of our prediction should be level 4.
                         </p>
                     </div>

@@ -10,19 +10,19 @@ export class Validation extends Component {
             <div> 
                 <Navigation current="validation" />
                 <div className="validation-page-content">
-                    <h1>Validation</h1>
-                    <p>After all statistical analysis and model training, we can then access the vadility of each approach.</p>
+                    <h1>4. Validation</h1>
+                    <p>After all statistical analysis and model training, we can then access the validity of each approach.</p>
                     <p>
-                        And since poverty level only has four outcomes, most of the visulization techiques are not appropriately visulize the result,
-                        which leads us to apply some basic techiques(barplot and pie chart) to explain the efficacy of our analysis.
+                        And since poverty level only has four outcomes, most of the visualization techniques are not appropriately visualize the result,
+                        which leads us to apply some basic techniques(barplot and pie chart) to explain the efficacy of our analysis.
                     </p>
                     <div>
-                        <h2>Visulization to the performance of statistical analysis</h2>
+                        <h2>4.1 Visualization  of Statistical Analysis</h2>
                         <p>The first aspect is we can analyze our statistical model by distributions of prediction and actual poverty level</p>
                         <center><img src="./imgs/stat_pred.png" ></img></center>
                         
 
-                        <p>With the barplot, we can clearly observe that the statistic model has undeprediction at level 1 and 2, 
+                        <p>With the barplot, we can clearly observe that the statistic model has under prediction at level 1 and 2, 
                             while has overprediction at level 3 and 4, with level 3 has significant overprdiction. Given logistic regression
                             is to fit the data into s-like shape distribution, we can conjecture that the distribution of poverty level may not
                             hold a s-like shape, therefore owning lower prediction at lower end and overprediction at higher end.</p>
@@ -44,11 +44,11 @@ export class Validation extends Component {
                             This shows that this model does capture some relationships between household structure and poverty level. (residual converges to 0)
                         </p>
 
-                        <h2>Statistical Analysis: Chi-2 Test of best fit model</h2>
+                        <h2>4.2 Statistical Analysis: Chi-2 Test of best fit model</h2>
                         <div>
                             <p>
-                                There is no straightfowward way of accessing the strength of this regression, as the dependent variable is ordinal variable.
-                                However, we can apply the best fit model test to determine whether this model can capture the relationship betweem household
+                                There is no straightforward way of accessing the strength of this regression, as the dependent variable is ordinal variable.
+                                However, we can apply the best fit model test to determine whether this model can capture the relationship between household
                                 structure and poverty level.
                             </p>
 
@@ -56,7 +56,7 @@ export class Validation extends Component {
 
                             <ul>
                                 <li>H0: this model is a best fit between household attributes and poverty level</li>
-                                <li>H1: this model is not a best fit between household attributs and poverty level</li>
+                                <li>H1: this model is not a best fit between household attributes and poverty level</li>
                             </ul>
 
                             <p>
@@ -66,8 +66,8 @@ export class Validation extends Component {
 
                             <p>With this result, there are two possibilities about why the statistical analysis is not a best fit model</p>
                             <ul>
-                                <li>There is no relaionship between household attributes and poverty level.</li>
-                                <li>This statistic model have fewer explainatory potential to the relationships.</li>
+                                <li>There is no relationship between household attributes and poverty level.</li>
+                                <li>This statistic model have fewer explanatory potential to the relationships.</li>
                             </ul>
                             <p>
                                 For those two reasons, we can access the performance of machine learning method. If the machine learning method also fails to
@@ -77,7 +77,7 @@ export class Validation extends Component {
                     </div>
 
                     <div>
-                        <h2>Visulization to the performance of random forest</h2>
+                        <h2>4.3 Visualization of Random Forest</h2>
                         <p>With similar approach, we will first access the distribution of predict poverty values against actual</p>
                         <center><img src="./imgs/rf_bar_chart.png"></img></center>
                         
@@ -96,13 +96,13 @@ export class Validation extends Component {
                             only 2% difference, which implies the problem of overprediction is not as significant as the one in statistical analysis. 
                         </p>
 
-                        <h2>Accruacy accessment against test data.</h2>
+                        <h2>4.4 Accuracy Assessment against Test Data</h2>
 
-                        <p>With the best model, we access its vadility by predicting the testing data, and get an accuracy rate of 93.13%.</p>
+                        <p>With the best model, we access its validity by predicting the testing data, and get an accuracy rate of 93.13%.</p>
                         <p>
-                            With accruacy in test data is higher than the accruacy in cross validation(92.00%), this random forest does not have the
-                            problem of overfitting/underfitting data(or test accruacy will decrease significantly). In further, with the accruacy of
-                            93% for predicting 4 outcomes(random guess should yields accruacy around 25%), random forest does have the prediction potential
+                            With accuracy in test data is higher than the accuracy in cross validation(92.00%), this random forest does not have the
+                            problem of overfitting/underfitting data(or test accuracy will decrease significantly). In further, with the accuracy of
+                            93% for predicting 4 outcomes(random guess should yields accuracy around 25%), random forest does have the prediction potential
                             to predict poverty and capture the relationship.
                         </p>
 

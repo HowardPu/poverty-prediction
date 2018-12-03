@@ -42,7 +42,7 @@
 }
 
 .structure-container {
-  background-color: #bcaaa4;
+  background-color:#8e7e81 !important;
   color: white;
   padding: 5%;
   padding-top: 2rem;
@@ -110,6 +110,7 @@ footer {
   width: 800px;
   box-shadow: black 2px;
 }
+
 
 .barchart {
   padding-top: 20px;
@@ -277,7 +278,6 @@ footer {
   table {
 	  border-collapse: collapse;
 	  width: 65% !important;
-	  margin-left: 15%;
   }
   
   th, td, tr {
@@ -314,9 +314,24 @@ footer {
   }
 
   .selector {
+	  display: flex;
+	  justify-content: space-between;
 	  width: 800px;
   }
 
+  .selector-item{
+	flex-basis: 50%;
+  }
+
+  table {
+	  background-color: white !important;
+  }
+
+.subtitle {
+	font-weight: bold;
+	margin-top: 40px;
+	font-size: 16pt;
+}
   
   
   @keyframes App-logo-spin {
