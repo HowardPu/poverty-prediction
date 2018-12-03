@@ -24,8 +24,8 @@ export class StatAnalysis extends Component {
                         <h2>2.2 Correlations</h2>
                         {/*Some Charts shows how each attrobutes correlate to the poverty level*/}
                         <p>
-                            Since correlation is a measurement for quantitive variables, we found that it can be less meaningful in this case. 
-                            (Poverty Level is a ordinal variable instead of quantitive.) This means, we cannot apply correlation to find the best
+                            Since correlation is a measurement for quantitive variables, we found that it can be less meaningful in this case
+                            (Poverty Level is a ordinal variable instead of quantitive). This means, we cannot apply correlation to find the best
                             set of independent variables to maximize the relationship between household attributes and poverty level.
                         </p>
                     </div>
@@ -56,7 +56,7 @@ export class StatAnalysis extends Component {
                         </p>
                     </div>
                 </div>
-                <footer>For more detailed analysis, the code can be accessed at (provide a href)</footer>
+                <footer>For more detailed analysis, the code can be accessed at <a href="https://github.com/HowardPu/poverty-prediction" target="_blank">our Github page</a></footer>
             </div>
         )
     }

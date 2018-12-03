@@ -108,7 +108,7 @@ export class MachineLearning extends Component {
                         </div>                        
                     </div>
                 </div>
-                <footer>For more detailed analysis, the code can be accessed at (provide a href)</footer>
+                <footer>For more detailed analysis, the code can be accessed at <a href="https://github.com/HowardPu/poverty-prediction" target="_blank">our Github page</a></footer>
             </div>
         )
     }
