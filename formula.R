@@ -72,4 +72,4 @@ pie <- bp + coord_polar("y", start=0) + geom_text(aes(y=value, label=scales::per
 pie
 
 bar_data <- data_frame(residual = best.predict - target)
-ggplot(bar_data, aes(x = residual)) + geom_bar(residual)
+ggplot(bar_data) + geom_bar(aes(x = residual))
