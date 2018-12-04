@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import {Navigation} from './parts/navigation'
 
+// this page shoes how we approach the machine learning process to tackle with our data-driven question
 export class MachineLearning extends Component {
     render() {
         return(
-            <div> 
+            <div > 
                 <Navigation current="ml" />
-                <div>
-                    <h1>Machine Learning</h1>
-                    
-                    <div>
-                        <h2>Model Selection</h2>
+                <div className="ml-page-content">
+                    <div className="roundness-shadow white-box">
+                        <h1>3. Machine Learning</h1>
+                    </div>
+
+                    <div className="roundness-shadow white-box margin">
+                        <h2>3.1 Model Selection</h2>
 
                         <div>
                             <p>We decided to apply Random Forest Classifications to this relationship accessment as the following two conditions are met:</p>
@@ -22,20 +25,20 @@ export class MachineLearning extends Component {
                     </div>
 
                     <div>
-                        <h2>Maching Learning Preparation</h2>
-
-                        <div>
-                            <h2>Feature Engineering</h2>
+                        <div className="roundness-shadow white-box margin">
+                            <h2>3.2 Maching Learning Preparation</h2>
+                        </div>
+                        <div className="roundness-shadow white-box margin"> 
+                            <h3>3.2.1 Feature Engineering</h3>
                             
-                            {/* flex box to show three aspects?*/}
                             <div className="feature-selection-container" >
                                 <div className="feature-selection-item" >
-                                    <h3>Feature Addtion</h3>
+                                    <h4>3.2.1.1 Feature Addition</h4>
                                     <div>
                                         <p>We decided not to add extra features in this dataset for the following three reasons</p>
 
                                         <ul>
-                                            <li>This dataset has alread included all attributes which have high relationship to poverty level by research paper in other countries such as China, Indonesia. (House material, possession, etc)</li>
+                                            <li>This dataset has already included all attributes which have high relationship to poverty level by research paper in other countries such as China, Indonesia. (House material, possession, etc)</li>
                                             <li>Some variables which may have relationship to poverty level also have been transformed. (age square, average year of education, etc)</li>
                                             <li>most quantitive variables are also been processed to categorical variables(# of tablets --> whether a household has a tablet)</li>
                                         </ul>
@@ -43,7 +46,7 @@ export class MachineLearning extends Component {
                                 </div>
 
                                 <div className="feature-selection-item">
-                                    <h3>Feature selection</h3>
+                                    <h4>3.2.1.2 Feature Selection</h4>
                                     <p> 
                                         The feature selection is based on how well an independent variable can explain the poverty level. In this case,
                                         we apply each integer top percentage features as thresholds to discover the best set of features which yields highest accruacy.
@@ -51,7 +54,7 @@ export class MachineLearning extends Component {
                                 </div>
 
                                 <div className="feature-selection-item">
-                                    <h3>Feature Transformation</h3>
+                                    <h4>3.2.1.3 Feature Transformation</h4>
                                     <p>
                                         Some features may not have linear relationship to poverty level, which means we need to transform some of the features
                                         in higher degrees. With those in mind, we include three different degrees(1 to 3) to determine which one is the best fit
@@ -62,13 +65,13 @@ export class MachineLearning extends Component {
                         </div>
                     </div>
 
-                    <div>
-                        <h2>Model Training</h2>
+                    <div className="roundness-shadow white-box margin">
+                        <h3>3.2.2 Model Training</h3>
 
                         {/* Flex box? */}
                         <div className="Model-Training-container" >
                             <div className="model-training-item" >
-                                <h3>Data Separation</h3>
+                                <h4>3.2.2.1 Data Separation</h4>
                                 <p>
                                     In terms of validating the random forest model, we need to split the data into training and testing at different proportions.
                                     Since training data and testing data cannot be small(otherwise yields in low accruacy/high variance in testing), we decide to
@@ -77,12 +80,12 @@ export class MachineLearning extends Component {
                             </div>
 
                             <div className="model-training-item" >
-                                <h3>Standard for Validation</h3>
+                                <h4>3.2.2.2 Standard for Validation</h4>
                                 <p>Since this is a classification prediction, we need to predict each household precisely, which implies accruacy is the standard for evaluation.</p>
                             </div>
 
                             <div className="model-training-item" >
-                                <h3>Cross Validation</h3>
+                                <h4>3.2.2.3 Cross Validation</h4>
                                 <p>
                                     In order to mimize the variance of training by chance, we will apply cross validation in traing process to make sure the accruate score consistent.
                                     With those in minds, we folded the training data into 10 piences with same size. For each training cycle, 9 piceces will train the data, use the last picece
@@ -92,8 +95,8 @@ export class MachineLearning extends Component {
                         </div>
                     </div>
 
-                    <div>
-                        <h2>Result</h2>
+                    <div className="roundness-shadow white-box margin" >
+                        <h2>3.3 Result</h2>
                         <div>
                             <p>Given all preparations, the result of the best model of random forest is the following:</p>
                             <ul>
@@ -108,7 +111,7 @@ export class MachineLearning extends Component {
                         </div>                        
                     </div>
                 </div>
-                <footer>For more detailed analysis, the code can be accessed at (provide a href)</footer>
+                <footer>For more detailed analysis, the code can be accessed at <a href="https://github.com/HowardPu/poverty-prediction" target="_blank">our Github page</a></footer>
             </div>
         )
     }
