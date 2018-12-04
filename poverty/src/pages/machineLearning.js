@@ -16,7 +16,7 @@ export class MachineLearning extends Component {
                             <p>We decided to apply Random Forest Classifications to this relationship accessment as the following two conditions are met:</p>
                             <ul>
                                 <li>The target prediction is an ordinary variable with 4 outcomes, which leads us to apply Classifications approach</li>
-                                <li>Random Forest have high prediction potential with high dimension dataset(62 columns in this research)</li>
+                                <li>Random Forest have good perfomance in working with high dimension dataset(62 columns in this research)</li>
                             </ul>
                         </div>
                     </div>
@@ -35,9 +35,9 @@ export class MachineLearning extends Component {
                                         <p>We decided not to add extra features in this dataset for the following three reasons</p>
 
                                         <ul>
-                                            <li>This dataset has alread included all attributes which have high relationship to poverty level by research paper in other countries such as China, Indonesia. (House material, possession, etc)</li>
+                                            <li>This dataset has already included all attributes we can find from research paper about poverty classification in other countries such as China, Indonesia. (House material, possession, etc)</li>
                                             <li>Some variables which may have relationship to poverty level also have been transformed. (age square, average year of education, etc)</li>
-                                            <li>most quantitive variables are also been processed to categorical variables(# of tablets --> whether a household has a tablet)</li>
+                                            <li>Most quantitive variables are also been processed to categorical variables(# of tablets --> whether a household has a tablet)</li>
                                         </ul>
                                     </div>
                                 </div>
