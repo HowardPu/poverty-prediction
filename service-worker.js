@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/poverty-prediction/precache-manifest.b5d5bd585dccae066a0a02d94cf0a8bf.js"
+  "/howardpu/info/poverty-prediction/poverty/precache-manifest.e22d8733fd18964a65b0600b51d9419e.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/poverty-prediction/index.html", {
+workbox.routing.registerNavigationRoute("/howardpu/info/poverty-prediction/poverty/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
