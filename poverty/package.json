@@ -1,6 +1,6 @@
 {
   "name": "poverty",
-  "homepage": "http://students.washington.edu/howardpu/info/poverty-prediction/poverty",
+  "homepage": "http://students.washington.edu/howardpu/info/poverty-prediction",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
