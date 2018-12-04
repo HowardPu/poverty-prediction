@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import {Navigation} from './parts/navigation'
 
+// this page demonstrates the statistical approach of how we tackle with our data driven question
 export class StatAnalysis extends Component {
     render() {
         return(
             <div>
                 <Navigation current="stat"/> 
                 <div className="stat-page-content" >
-                    <h1>Statistical Analysis to the Data</h1>
+                    <div className="roundness-shadow white-box" >
+                        <h1>2. Statistical Analysis to the Data</h1>
+                    </div>
 
-                    <div>
-                        <h2>Distribution Selection</h2>
+                    <div className="roundness-shadow white-box margin">
+                        <h2>2.1 Distribution Selection</h2>
 
                         <p>
                             The type of the poverty level is ordinal variable, as each value represents the order of poverty.
@@ -20,43 +23,49 @@ export class StatAnalysis extends Component {
                         </p>
                     </div>
 
-                    <div>
-                        <h2>Correlations</h2>
+                    <div className="roundness-shadow white-box margin">
+                        <h2>2.2 Correlations</h2>
                         {/*Some Charts shows how each attrobutes correlate to the poverty level*/}
                         <p>
-                            Since correlation is a measurement for quantitive variables, we found that it can be less meaningful in this case. 
-                            (Poverty Level is a ordinal variable instead of quantitive.) This means, we cannot apply correlation to find the best
+                            Since correlation is a measurement for quantitive variables, we found that it can be less meaningful in this case
+                            (Poverty Level is an ordinal variable instead of quantitive). This means, we cannot apply correlation to find the best
                             set of independent variables to maximize the relationship between household attributes and poverty level.
                         </p>
                     </div>
 
-                    <div>
-                        <h2>Feature Selection</h2>
+                    <div className="roundness-shadow white-box margin">
+                        <h2>2.3 Feature Selection</h2>
 
                         <div>
                             <p>
                                 With the impossibility of selecting features by correlation, we decide to apply a more generalized and 
-                                systemmatically way to find the set with highest prediction power: formard feature selection. This means,
+                                systematically way to find the set with highest prediction power: forward feature selection. This means,
                                 we wills start with a empty set of parameters, then add each parameter one by one, and finally includes variables
                                 which can enhance the prediction power of poverty level.
                             </p>
                             <p>
-                                For measuring the prediction power, we decide to use accruacy as there are only 4 outcomes to our dependent variable.
+                                For measuring the prediction power, we decide to use accuracy as there are only 4 outcomes to our dependent variable.
                             </p>
 
                         </div>
                     </div>
 
-                    <div>
-                        <h2>Result</h2>
+                    <div className="roundness-shadow white-box margin" >
+                        <h2>2.4 Result</h2>
                         <p>
-                            With all of the prosessing, the ordinal logistics regressions yields the accruacy of 62.5%. However, since the the formula
-                            contains 30 variables and 30 coefficients, the report will be messy and we include the <a>code</a> in our repository for 
-                            reproducing our research and displaying formula.
+                            With all of the processing, the ordinal logistics regressions yields the accuracy of 62.5%. However, since the the formula
+                            contains 30 variables and 30 coefficients, the report will show the general shape of the formula, and we include 
+                            the <a>code</a> in our repository for reproducing purpose.
+                        </p>
+
+                        <p>Poverty Level = A + 2.014 * postgraduate education + 1.689 * e<sup>-1</sup> * floor quaility + ....</p>
+                        <p>
+                            where A is the intercept for each interval: A will be -1.309 for estimation not including A 
+                            beteen poverty level 1 and 2, and so on.
                         </p>
                     </div>
                 </div>
-                <footer>For more detailed analysis, the code can be accessed at (provide a href)</footer>
+                <footer>For more detailed analysis, the code can be accessed at <a href="https://github.com/HowardPu/poverty-prediction" target="_blank">our Github page</a></footer>
             </div>
         )
     }
