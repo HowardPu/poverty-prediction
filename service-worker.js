@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/poverty-prediction/precache-manifest.9d8db6cd1bfff6805db4aaf997c33609.js"
+  "/poverty-prediction/precache-manifest.b5d5bd585dccae066a0a02d94cf0a8bf.js"
 );
 
 workbox.clientsClaim();
