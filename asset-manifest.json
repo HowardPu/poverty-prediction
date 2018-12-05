@@ -1,7 +1,7 @@
 {
   "main.css": "/howardpu/info/poverty-prediction/static/css/main.8587bc0a.chunk.css",
-  "main.js": "/howardpu/info/poverty-prediction/static/js/main.de13b977.chunk.js",
-  "main.js.map": "/howardpu/info/poverty-prediction/static/js/main.de13b977.chunk.js.map",
+  "main.js": "/howardpu/info/poverty-prediction/static/js/main.2e4b5f06.chunk.js",
+  "main.js.map": "/howardpu/info/poverty-prediction/static/js/main.2e4b5f06.chunk.js.map",
   "static/css/1.8c7d677f.chunk.css": "/howardpu/info/poverty-prediction/static/css/1.8c7d677f.chunk.css",
   "static/js/1.3f4ef7f0.chunk.js": "/howardpu/info/poverty-prediction/static/js/1.3f4ef7f0.chunk.js",
   "static/js/1.3f4ef7f0.chunk.js.map": "/howardpu/info/poverty-prediction/static/js/1.3f4ef7f0.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/media/App.css": "/howardpu/info/poverty-prediction/static/media/poverty_child.0c604848.jpg",
   "static/css/main.8587bc0a.chunk.css.map": "/howardpu/info/poverty-prediction/static/css/main.8587bc0a.chunk.css.map",
   "index.html": "/howardpu/info/poverty-prediction/index.html",
-  "precache-manifest.0f9c38f5a83ff6ee567d918477131366.js": "/howardpu/info/poverty-prediction/precache-manifest.0f9c38f5a83ff6ee567d918477131366.js",
+  "precache-manifest.3891018952bf6f88aa545daeb15e1ea6.js": "/howardpu/info/poverty-prediction/precache-manifest.3891018952bf6f88aa545daeb15e1ea6.js",
   "service-worker.js": "/howardpu/info/poverty-prediction/service-worker.js"
 }
