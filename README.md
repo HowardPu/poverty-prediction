@@ -12,3 +12,6 @@
 
 #### Statistical Model and Analysis
 * The code of Statisical Analysis (Ordinal Logistic Rgression) can be checked in [formula.R](formula.R)
+
+#### Final Resource
+* Our published report can be found at [here](http://students.washington.edu/howardpu/info/poverty-prediction/#/)

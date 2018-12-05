@@ -46,7 +46,7 @@ export class Conclusion extends Component {
                         in mind, further research can expand the range of parameters wilder for higher accuracy.
                     </div>
                 </div>
-                <footer>For more detailed analysis, the code can be accessed at <a href="https://github.com/HowardPu/poverty-prediction" target="_blank">our Github page</a></footer>
+                <footer>For more detailed analysis, the code can be accessed at <a href="https://github.com/HowardPu/poverty-prediction" target="_blank" rel="noopener noreferrer">our Github page</a></footer>
             </div>
         )
     }

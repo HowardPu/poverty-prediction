@@ -55,7 +55,7 @@ export class StatAnalysis extends Component {
                         <p>
                             With all of the processing, the ordinal logistics regressions yields the accuracy of 62.5%. However, since the the formula
                             contains 30 variables and 30 coefficients, the report will show the general shape of the formula, and we include 
-                            the <a>code</a> in our repository for reproducing purpose.
+                            the <a href="https://github.com/HowardPu/poverty-prediction/blob/master/formula.R" target="_blank" rel="noopener noreferrer" >code</a> in our repository for reproducing purpose.
                         </p>
 
                         <p>Poverty Level = A + 2.014 * postgraduate education + 1.689 * e<sup>-1</sup> * floor quaility + ....</p>
@@ -65,7 +65,7 @@ export class StatAnalysis extends Component {
                         </p>
                     </div>
                 </div>
-                <footer>For more detailed analysis, the code can be accessed at <a href="https://github.com/HowardPu/poverty-prediction" target="_blank">our Github page</a></footer>
+                <footer>For more detailed analysis, the code can be accessed at <a href="https://github.com/HowardPu/poverty-prediction" target="_blank" rel="noopener noreferrer">our Github page</a></footer>
             </div>
         )
     }
